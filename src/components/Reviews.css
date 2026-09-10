@@ -1,0 +1,21 @@
+/* =========================================================
+   26. GOOGLE REVIEWS
+========================================================= */
+
+.reviews-section {
+    position: relative;
+
+    width: 100%;
+
+    padding: 20px 5%;
+
+    overflow: hidden;
+
+    background: 
+    black
+        
+}
+
+.reviews-content {
+    text-align: left;
+}

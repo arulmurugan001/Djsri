@@ -1,0 +1,258 @@
+/* =========================================================
+   29. CONTACT
+========================================================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.2fr;
+
+    gap: 100px;
+}
+
+.contact-info h2 {
+    max-width: 500px;
+}
+
+.contact-details {
+    display: grid;
+
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    color: var(--accent);
+}
+
+.contact-item small {
+    display: block;
+
+    color: var(--text-muted);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.contact-item a,
+.contact-item span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #dddddd;
+
+    font-size: 13px;
+
+    transition: var(--transition);
+}
+
+.contact-item a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   30. CONTACT FORM
+========================================================= */
+
+.contact-form {
+    padding: 35px;
+
+    background: var(--bg-card);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.25);
+}
+
+.contact-form .btn-primary {
+    margin-top: 14px;
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border:
+        1px solid var(--border);
+
+    outline: none;
+
+    border-radius: 6px;
+
+    background: var(--bg-input);
+
+    color: #ffffff;
+
+    transition: var(--transition);
+}
+
+.form-group textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+.form-group select {
+    appearance: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #5f626c;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--accent);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(255, 23, 68, 0.08);
+}
+
+.form-message {
+    font-size: 13px;
+}
+
+.form-message.success {
+    color: var(--whatsapp);
+}
+
+.form-message.error {
+    color: var(--accent-light);
+}
+
+.form-button {
+    width: 100%;
+
+    border: 1px solid var(--accent);
+
+    background: var(--accent);
+
+    color: #ffffff;
+}
+
+.form-button:hover {
+    background: var(--accent-light);
+
+    border-color: var(--accent-light);
+}
+
+/* =========================================================
+   WHATSAPP BUTTON
+   Deliberately its own brand color, distinct from the red
+   "Send Enquiry" button above it, so the two calls-to-action
+   read as different actions.
+========================================================= */
+
+.whatsapp-button {
+    width: 100%;
+
+    margin-top: 14px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 52px;
+
+    border: 1px solid var(--whatsapp);
+    border-radius: 8px;
+
+    background: var(--whatsapp);
+    color: #ffffff;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.whatsapp-icon {
+    width: 24px;
+    height: 24px;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+.whatsapp-button:hover {
+    background: var(--whatsapp-dark);
+    border-color: var(--whatsapp-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-button:active {
+    transform: translateY(0);
+}

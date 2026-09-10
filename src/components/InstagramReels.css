@@ -1,0 +1,251 @@
+/* =========================================
+   INSTAGRAM REELS SECTION
+========================================= */
+
+.instagram-reels-section {
+    width: 100%;
+    padding: 80px 5%;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(255, 23, 68, 0.15),
+            transparent 45%
+        );
+        
+}
+
+
+/* Header */
+
+.reels-header {
+    max-width: 1400px;
+    margin: 0 auto 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.reels-subtitle {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #eed6de;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.reels-header h2 {
+    margin: 0 0 8px;
+
+    color: #f0e8e8;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.1;
+}
+
+.reels-header p {
+    margin: 0;
+
+    color: #f8f1f1;
+    font-size: 16px;
+}
+
+
+/* Instagram Button */
+
+.instagram-follow-btn {
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 13px 22px;
+
+    color: #ffffff;
+    background: linear-gradient(
+        45deg,
+        #f09433,
+        #e6683c,
+        #dc2743,
+        #cc2366,
+        #bc1888
+    );
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.instagram-follow-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(220, 39, 67, 0.25);
+}
+
+.instagram-follow-btn span {
+    font-size: 20px;
+}
+
+
+/* =========================================
+   REELS CONTAINER
+========================================= */
+
+.reels-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* Reel Card */
+
+.reel-card {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 9 / 16;
+
+    overflow: hidden;
+
+    background: #f3f3f3;
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.reel-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Instagram iframe/embed */
+
+.reel-card .instagram-media {
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    max-width: 100% !important;
+
+    margin: 0 !important;
+
+    border: 0 !important;
+
+    border-radius: 16px !important;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .reels-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .instagram-reels-section {
+        padding: 55px 0;
+    }
+
+    .reels-header {
+        padding: 0 20px;
+
+        display: block;
+
+        margin-bottom: 25px;
+    }
+
+    .reels-header h2 {
+        font-size: 30px;
+    }
+
+    .reels-header p {
+        margin-bottom: 20px;
+    }
+
+    .instagram-follow-btn {
+        padding: 11px 18px;
+    }
+
+    /* Horizontal swipe on mobile */
+
+    .reels-wrapper {
+        display: flex;
+
+        gap: 15px;
+
+        overflow-x: auto;
+
+        padding: 5px 20px 20px;
+
+        scroll-snap-type: x mandatory;
+
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: none;
+    }
+
+    .reels-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .reel-card {
+        flex: 0 0 72vw;
+
+        max-width: 300px;
+
+        scroll-snap-align: start;
+
+        border-radius: 14px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .reel-card {
+        flex: 0 0 78vw;
+    }
+
+}
