@@ -1,23 +1,51 @@
 import "./Contact.css";
 import { useState } from "react";
 
+// Set VITE_API_URL in a .env file at the project root (see notes below).
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 async function sendEnquiry(event, setStatus, setMessage) {
   event.preventDefault();
   setStatus("sending");
   setMessage("");
+
+  const form = event.currentTarget;
+  const formData = new FormData(form);
+
+  // Backend (see dj-sri-backend/src/validators/enquiry.validator.js) expects
+  // { name, email, phone, eventType, message } as JSON — not FormData, and
+  // "eventType" not "event".
+  const payload = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    phone: formData.get("phone") || undefined,
+    eventType: formData.get("event"),
+    message: formData.get("message"),
+  };
+
   try {
-    const response = await fetch(event.currentTarget.action, {
+    const response = await fetch(`${API_URL}/api/enquiries`, {
       method: "POST",
-      body: new FormData(event.currentTarget),
-      headers: { Accept: "application/json" },
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
     });
-    if (!response.ok) throw new Error("Submission failed");
-    event.currentTarget.reset();
+
+    const data = await response.json().catch(() => ({}));
+
+    if (!response.ok) {
+      throw new Error(data.message || "Submission failed");
+    }
+
+    form.reset();
     setStatus("sent");
     setMessage("Thank you! Your enquiry has been sent successfully.");
-  } catch {
+  } catch (err) {
     setStatus("error");
-    setMessage("Unable to send your enquiry. Please try again.");
+    setMessage(
+      err.message === "Failed to fetch"
+        ? "Unable to reach the server. Please make sure the backend is running."
+        : "Unable to send your enquiry. Please try again."
+    );
   }
 }
 
@@ -77,8 +105,8 @@ export default function Contact() {
                                     CALL ME
                                 </small>
 
-                                <a href="tel:+919965952998">
-                                    +91 99659 52998
+                                <a href="tel:+919894807032">
+                                    +91 98948 07032
                                 </a>
 
                             </div>
@@ -105,8 +133,8 @@ export default function Contact() {
                                     EMAIL
                                 </small>
 
-                                <a href="mailto:hello@djsri.com">
-                                    hello@djsri.com
+                                <a href="mailto:hello@dreamscape.com">
+                                    hello@dreamscape.com
                                 </a>
 
                             </div>
@@ -151,8 +179,6 @@ export default function Contact() {
                 <form
                     id="contactForm"
                     className="contact-form"
-                    action="https://formspree.io/f/xoeqkvjj"
-                    method="POST"
                     onSubmit={handleSubmit}
                 >
 
@@ -335,7 +361,7 @@ export default function Contact() {
                     
 
                     <a
-                        href="https://wa.me/919965952998?text=Hello%2C%20I%20have%20an%20enquiry."
+                        href="https://wa.me/919894807032?text=Hello%2C%20I%20have%20an%20enquiry."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="whatsapp-button"

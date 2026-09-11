@@ -6,6 +6,7 @@
     position: relative;
 
     width: 100%;
+    text-align: left;
 
     padding: 20px 5%;
 
@@ -16,6 +17,8 @@
         
 }
 
+
 .reviews-content {
+    margin-bottom: 4%;
     text-align: left;
 }

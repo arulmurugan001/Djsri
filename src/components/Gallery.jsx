@@ -17,8 +17,7 @@ export default function Gallery() {
                         </p>
 
                         <h2>
-                            Moments Behind
-                            <span>The Music</span>
+                            Moments Behind <span>The Music</span>
                         </h2>
 
                     </div>
@@ -212,6 +211,43 @@ export default function Gallery() {
                         </div>
 
                     </article>
+                    
+                    <article className="gallery-item gallery-item-wide">
+
+                        <img
+                            src="/images/dj-6.jpeg"
+                            alt="DJ mixing music in front of a crowd"
+                            loading="lazy" />
+
+                        <div className="gallery-overlay">
+
+                            <div className="gallery-info">
+
+                                <span>
+                                    ENERGY NIGHT
+                                </span>
+
+                                <h3>
+                                    Fire night
+                                </h3>
+
+                            </div>
+
+                            <button
+                                type="button"
+                                className="gallery-view"
+                                aria-label="View Festival Fire image"
+                            >
+                                <i
+                                    className="fa-solid fa-expand"
+                                    aria-hidden="true"
+                                ></i>
+                            </button>
+
+                        </div>
+
+                    </article>
+                    
 
                 </div>
 

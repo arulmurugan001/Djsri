@@ -16,7 +16,8 @@ export default function Reviews() {
 
             </div>
 
-            <div className="elfsight-app-12136640-6721-4a2e-8764-1feed907178b" data-elfsight-app-lazy></div>
+<div className="elfsight-app-12136640-6721-4a2e-8764-1feed907178b" data-elfsight-app-lazy></div>
+            
 
         </section>
   );

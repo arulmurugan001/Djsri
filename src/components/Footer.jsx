@@ -13,7 +13,7 @@ export default function Footer() {
                 <a
                     href="#home"
                     className="logo"
-                    aria-label="DJ Sri home"
+                    aria-label="Dream Scape home"
                 >
 
                     <span className="logo-icon">
@@ -26,7 +26,7 @@ export default function Footer() {
                     </span>
 
                     <span>
-                        DJ<span>SRI</span>
+                        Dream <span>Scape</span>
                     </span>
 
                 </a>
@@ -89,7 +89,7 @@ export default function Footer() {
                     </a>
 
                     <a
-                        href="https://wa.me/919965952998"
+                        href="https://wa.me/919894807032"
                         aria-label="WhatsApp"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -172,16 +172,16 @@ export default function Footer() {
                     Contact
                 </h3>
 
-                <a href="tel:+919965952998">
-                    +91 99659 52998
+                <a href="tel:+91 9894807032">
+                    +91 98948 07032
                 </a>
 
-                <a href="mailto:hello@djsri.com">
-                    hello@djsri.com
+                <a href="mailto:hello@dreamscape.com">
+                    hello@dreamscape.com
                 </a>
 
                 <span>
-                    Chennai, India
+                     Villupuram, Tamilnadu
                 </span>
 
             </div>
@@ -196,7 +196,7 @@ export default function Footer() {
             <div className="container">
 
                 <p>
-                    © 2026 DJ Sri. All Rights Reserved.
+                    © 2026 Dream Scape. All Rights Reserved.
                 </p>
 
                 <p>

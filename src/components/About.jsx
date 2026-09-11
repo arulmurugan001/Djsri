@@ -41,7 +41,7 @@ export default function About() {
                         <img
                             id="aboutSliderImage"
                             src={aboutImages[aboutImage]}
-                            alt="DJ Sri performing at an event"
+                            alt="DJ Sriii performing at an event"
                             loading="lazy" />
 
                     </div>
@@ -70,13 +70,12 @@ export default function About() {
                     </p>
 
                     <h2>
-                        Music Is More Than
-                        <span>A Sound.</span>
+                        Music Is More Than <span>A Sound.</span>
                     </h2>
 
 
                     <p className="section-text">
-                        I'm DJ Sri, a professional DJ passionate
+                        I'm DJ Sriii, a professional DJ passionate
                         about creating unforgettable experiences.
                         From intimate celebrations to high-energy
                         club nights, every performance is designed

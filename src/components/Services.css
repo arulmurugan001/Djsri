@@ -8,13 +8,14 @@
     grid-template-columns:
         repeat(4, 1fr);
 
-    gap: 18px;
+    gap: 30px;
 }
 
 .service-card {
     position: relative;
 
-    min-height: 350px;
+    min-height: 500px;
+    min-width: 300px;
 
     padding: 30px;
 
@@ -26,7 +27,7 @@
     background:
         linear-gradient(
             145deg,
-            #151821,
+            #93a3d4,
             #0d0f14
         );
 
@@ -64,7 +65,7 @@
     transform: translateY(-8px);
 
     border-color:
-        rgba(255, 23, 68, 0.4);
+        rgba(233, 227, 228, 0.904);
 
     box-shadow:
         0 20px 50px rgba(0, 0, 0, 0.35);
@@ -80,11 +81,11 @@
     border-radius: 10px;
 
     background:
-        rgba(255, 23, 68, 0.1);
+        rgba(10, 9, 9, 0.925);
 
-    color: var(--accent);
+    color: white;
 
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .service-card > span {
@@ -94,13 +95,15 @@
 
     font-family: "Montserrat", sans-serif;
 
-    font-size: 11px;
+    font-size: 20px;
+    font-style: italic;
 }
 
 .service-card h3 {
-    margin-top: 7px;
+    margin-top: 200px;
 
     font-family: "Montserrat", sans-serif;
+    color: red;
 
     font-size: 22px;
 }
@@ -108,9 +111,9 @@
 .service-card p {
     margin-top: 15px;
 
-    color: var(--text-secondary);
+    color: white;
 
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .service-card a {
@@ -148,7 +151,7 @@
             rgba(0, 0, 0, 0.60),
             rgba(0, 0, 0, 0.75)
         ),
-        url("/images/event/pongalDJ.jpeg");
+        url("/images/event/wedding.jpg");
 }
 
 .SportingEvents-card {
@@ -157,7 +160,7 @@
             rgba(0, 0, 0, 0.60),
             rgba(0, 0, 0, 0.75)
         ),
-        url("/images/event/sports.jpeg");
+        url("/images/event/sport.jpg");
 }
 
 .Pubbing-card {
@@ -166,7 +169,7 @@
             rgba(0, 0, 0, 0.60),
             rgba(0, 0, 0, 0.75)
         ),
-        url("/images/event/pubbing.jpeg");
+        url("/images/event/pubbing.jpg");
 }
 
 .FashionShow-card {
@@ -175,7 +178,7 @@
             rgba(0, 0, 0, 0.60),
             rgba(0, 0, 0, 0.75)
         ),
-        url("/images/event/Fashion.jpeg");
+        url("/images/event/fashion.jpg");
 }
 
 .CorporateEvents-card {
@@ -184,7 +187,7 @@
             rgba(0, 0, 0, 0.60),
             rgba(0, 0, 0, 0.75)
         ),
-        url("/images/event/corporate.jpeg");
+        url("/images/event/corporate.jpg");
 }
 
 .College-card {
@@ -193,7 +196,7 @@
             rgba(0, 0, 0, 0.60),
             rgba(0, 0, 0, 0.75)
         ),
-        url("/images/event/college.jpeg");
+        url("/images/event/college.jpg");
 }
 
 .ClubEvents-card {
@@ -202,7 +205,7 @@
             rgba(0, 0, 0, 0.60),
             rgba(0, 0, 0, 0.75)
         ),
-        url("/images/event/clubevent.jpeg");
+        url("/images/event/clubevent.jpg");
 }
 
 .privateparty-card {
@@ -211,7 +214,7 @@
             rgba(0, 0, 0, 0.60),
             rgba(0, 0, 0, 0.75)
         ),
-        url("/images/event/private.jpeg");
+        url("/images/event/private.jpg");
 }
 
 /* Service cards with a background photo need their background-size

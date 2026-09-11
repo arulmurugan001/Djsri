@@ -13,7 +13,7 @@ export default function Header() {
             <a
                 href="#home"
                 className="logo"
-                aria-label="DJ Sri home"
+                aria-label="Dream Scape home"
             >
 
                 <span className="logo-icon">
@@ -24,7 +24,7 @@ export default function Header() {
                 </span>
 
                 <span>
-                    DJ<span>SRI</span>
+                    Dream <span>Scape</span>
                 </span>
 
             </a>
