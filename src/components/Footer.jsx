@@ -5,9 +5,6 @@ export default function Footer() {
 
         <div className="container footer-grid">
 
-
-            
-
             <div className="footer-brand">
 
                 <a
@@ -168,23 +165,47 @@ export default function Footer() {
 
             <div className="footer-column">
 
-                <h3>
-                    Contact
-                </h3>
+    <h3>
+        Contact
+    </h3>
 
-                <a href="tel:+91 9894807032">
-                    +91 98948 07032
-                </a>
+    <a href="tel:+919894807032">
+        <i
+            className="fa-solid fa-phone"
+            aria-hidden="true"
+        ></i>
+        +91 98948 07032
+    </a>
 
-                <a href="mailto:hello@dreamscape.com">
-                    hello@dreamscape.com
-                </a>
+    <a href="mailto:hello@dreamscape.com">
+        <i
+            className="fa-solid fa-envelope"
+            aria-hidden="true"
+        ></i>
+        hello@dreamscape.com
+    </a>
 
-                <span>
-                     Villupuram, Tamilnadu
-                </span>
+    <a
+        href="https://maps.app.goo.gl/qkWN96A18SQdCjLM9"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="location-link"
+        aria-label="Open Dream Scape location in Google Maps"
+    >
+        <i
+            className="fa-solid fa-location-dot"
+            aria-hidden="true"
+        ></i>
 
-            </div>
+        <span>
+            No.65 Thazhampoo Street, post,
+            Arasu Pokkuvarathu Kazhaga,
+            Uzhiyar Nagar, Kandamanadi,
+            Viluppuram, Tamil Nadu 605401
+        </span>
+    </a>
+
+</div>
 
         </div>
 
