@@ -200,7 +200,7 @@ export default function Footer() {
                 </p>
 
                 <p>
-                    Designed for the love of music.
+                    Design and Developed by Digipondy.
                 </p>
 
             </div>
